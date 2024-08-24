@@ -15,12 +15,15 @@ public class ArrayInAscendingOrder {
         for (int i = 0; i < n; i++) {
             System.out.print(arr[i] + " ");
         }
-        for (int i = 1; i < n; i++) {
-            if (arr[i] < arr[i - 1]) {
-                int temp = arr[i];
-                arr[i] = arr[i - 1];
-                arr[i - 1] = temp;
+        for (int i = 0; i < n; i++) {
+           for(int j = 0; j<n-i-1; j++){
+            if(a[j]>a[j+1])
+            {
+                temp=a[j];
+                a[j]=a[j+1];
+                a[j+1]=temp;
             }
+        }
         }
         System.out.println("\nArray after sorting: ");
         for (int i = 0; i < n; i++) {
