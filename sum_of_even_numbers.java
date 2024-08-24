@@ -13,7 +13,9 @@ public class SumOfEven {
     static void sumOfEven(int n, int sum, int user) {
 
         if(n > 0){
-            sum = sum + n;
+            if(n % 2 == 0){
+               sum = sum + n;
+            }
             n--;
             sumOfEven(n, sum, user);
         } else {
